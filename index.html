@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no" />
+    <title>Online Ventures: experienced product developers helping businesses reach new heights</title>
+    <link rel="icon" href="http://online-ventures.s3.amazonaws.com/favicon.png" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800' rel='stylesheet' type='text/css'>
+    <meta property="og:image" content="http://online-ventures.s3.amazonaws.com/online-ventures-icon.png" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <style type="text/css">
+      *, *:before, *:after {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        font-family: 'Open Sans', 'Helvetica', 'Arial', 'Sans';
+      }
+
+      body {
+        background-color: #eee;
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      .container, iframe {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top:0;
+        left:0;
+      }
+
+      .container {
+        z-index: 2;
+        background-color: rgba(255,255,255,0.1);
+      }
+
+      .page {
+        display: block;
+        position: relative;
+        margin: 0 auto 2em;
+        padding: 1.5em;
+        width: 100%;
+        max-width: 60em;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 1em;
+        box-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+      }
+
+      .left-half {
+        vertical-align: top;
+        display: inline-block;
+        width: 49.5%;
+        padding: 1em;
+      }
+      .left-half img {
+        max-width: 50%;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .right-half {
+        display: inline-block;
+        width: 49.5%;
+        padding: 1em;
+      }
+
+      @media all and (max-width: 810px) {
+        .left-half, .right-half {
+          width: 100%;
+          padding: 0;
+        }
+
+        h1 {
+          font-size: 2.75em;
+        }
+      }
+
+      iframe {
+        z-index: 0;
+        position: fixed;
+      }
+
+      h1, h2, p {
+        text-align: center;
+      }
+      h1 {
+        font-size: 3em;
+        font-weight: 400;
+      }
+      h2 {
+        font-weight: 300;
+      }
+
+      fieldset {
+        display: block;
+        width: 100%;
+        max-width: 25em;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+        border-radius: 0.5em;
+        padding: 1em;
+        position: relative;
+      }
+
+      fieldset input, fieldset textarea, fieldset div.shadow {
+        width: 100%;
+        border-radius: 0.5em;
+        border: none;
+        font-size: 1em;
+        padding: 8px 12px;
+        margin-bottom: 0.5em;
+        background-color: #eee;
+        box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
+      }
+
+      fieldset input:focus, fieldset textarea:focus {
+        outline: 0;
+        border: 2px solid rgba(0,0,0,0.5);
+        padding: 6px 10px;
+        box-shadow: none;
+      }
+
+      fieldset textarea {
+        min-height: 75px;
+      }
+
+      fieldset *:last-child {
+        margin-bottom: 0;
+      }
+
+      fieldset .watermark {
+        color: #888;
+      }
+
+      fieldset .message {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0.5em;
+      }
+
+      fieldset .message.hidden {
+        display: none;
+      }
+
+      fieldset .message.error {
+        background-color: rgba(255,163,163,0.9);
+      }
+
+      fieldset .message.success {
+        background-color: rgba(163,163,255,0.9);
+      }
+
+      fieldset .message p {
+        position: relative;
+      }
+
+      input[name="first_name"], label[for="first_name"] {
+        display: none;
+      }
+
+      input[type="submit"] {
+        background-color: #00BCE0;
+        -webkit-appearance: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.2em;
+        box-shadow: inset 0 -1px 0 rgba(0,0,0,0.3);
+        text-shadow: 1px 1px rgba(0,0,0,0.3);
+      }
+
+      .autogrow {
+        -webkit-transition:height 0.2s linear;
+        -moz-transition:height 0.2s linear;
+        -o-transition:height 0.2s linear;
+        transition:height 0.2s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page">
+        <div class="left-half">
+          <img src="http://online-ventures.s3.amazonaws.com/online-ventures-logo.png" alt="Online Ventures: experienced product developers helping business reach new heights"/>
+          <h1><b>online</b>ventures</h1>
+          <h2>experienced product developers helping businesses reach new heights</h2>
+        </div>
+        <div class="right-half">
+          <p>
+            We're working on our new website right now. <br/><br/>
+
+            If you would like to reach us, <br/>please use the contact form below.
+          </p>
+          <fieldset>
+            <div class="hidden message">
+              <p>Something went wrong.<br>Please try again later.</p>
+            </div>
+            <form action="/contact" method="post">
+              <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+              <textarea name="message" watermark="What would you like to tell us?"></textarea>
+              <input type="text" name="first_name" />
+              <input type="text" name="last_name" watermark="Your name"/>
+              <input type="email" name="email" watermark="Your email"/>
+              <input type="submit" value="Talk to Us">
+            </form>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/?ie=UTF8&amp;ll=42.613812,-83.925762&amp;spn=0.040679,0.076132&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+    <script type="text/javascript" src="js/watermark.js"></script>
+    <script type="text/javascript" src="js/autogrow.js"></script>
+    <script type="text/javascript">
+      $page = $('.page');
+  $window = $(window);
+  $message = $('.message');
+  $('textarea').autogrow();
+
+  var center_page = function(){
+    var offset = (($window.height() - $page.outerHeight()) / 3);
+    $page.css('top', offset > 0 ? offset : 0);
+  };
+
+  $(window).resize(center_page).resize();
+
+  var display_message = function(type, message, delay){
+    $message.
+      show().
+      removeClass('hidden').
+      addClass(type).
+      html("\<p>"+message+"\</p>");
+    var mh = $message.height();
+    var ph = $message.find('p').height();
+    $message.find('p').css('top', (mh / 2) - ph);
+    if(delay) {
+      setTimeout(function(){
+        $message.fadeOut(500);
+      }, delay);
+    }
+  };
+
+  $('form').submit(function(e){
+    var $form = $(this);
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: $form.attr('action'),
+      data: {
+        name: $('[name="last_name"]').val(),
+        honeypot: $('[name="first_name"]').val(),
+        email: $('[name="email"]').val(),
+        message: $('[name="message"]').val()
+      },
+      success: function(data, status, jqXHR) {
+        console.log(data, status, jqXHR);
+        display_message('success', 'We\'ve gotten your message! <br/>Someone on the team will get back to you soon.');
+      },
+      error: function(jqXHR, status, error) {
+        console.log(jqXHR, status, error);
+        display_message('error', status, 4000);
+      }
+    });
+  });
+
+  $('iframe').click(function(e) {
+    e.preventDefault();
+  });
+    </script>
+  </body>
+</html>
+
