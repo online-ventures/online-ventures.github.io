@@ -1,0 +1,102 @@
+@import "components/variables"
+
+html, body
+  height: 100%
+
+header
+  width: 100%
+  position: relative
+  padding: 1rem
+  nav
+    position: absolute
+    right: 1rem
+    top: 1.5rem
+  img
+    height: 100px
+    margin: 15px
+
+section.jumbotron
+  h1
+    color: white
+    text-align: center
+    text-transform: uppercase
+    font-family: 'Fjalla One'
+    margin: 1.5em 0 1em
+
+section
+  background: white
+  padding: 2rem
+  text-align: center
+  &:nth-child(2n + 1)
+    background: #eee
+  &.hero
+    background: #2b4a5d
+
+.staff-photo
+  display: inline-block
+  width: 33.333%
+  height: 100px
+
+/*
+ *   Cool Hamburger Animation
+ *     by Daniel Eden (@daneden)
+ *        http://codepen.io/daneden/pen/FaiHD
+
+.toggle
+  visibility: hidden
+  position: absolute
+  left: -9999px
+
+.hamburger
+  margin: -8px -16px
+  display: block
+  width: 32px
+  height: 16px
+  position: relative
+  transition: .2s
+  transition-delay: .15s
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  i
+    display: block
+    text-indent: 100%
+    overflow: hidden
+    white-space: nowrap
+    height: 1px
+    background-color: black
+    width: 100%
+    position: absolute
+    top: 50%
+    transition: .3s
+    transition-delay: .2s
+  &:after, &:before
+    content: ''
+    position: absolute
+    top: 0
+    height: 0
+    border-bottom: 1px solid black
+    width: 100%
+    left: 0
+    right: 0
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    -webkit-transform-origin: left top
+  &:after
+    top: 100%
+    -webkit-transform-origin: left bottom
+
+.toggle:checked + .hamburger
+  -webkit-transform: translate3d(16px, 0, 0)
+  transition-delay: .2s
+  i
+    opacity: 0
+    transition-delay: 0
+  &:after
+    -webkit-transform: rotate3d(0, 0, 1, -135deg) translate3d(-8px, 4px, 0)
+  &:before
+    -webkit-transform: rotate3d(0, 0, 1, 135deg) translate3d(-8px, -4px, 0)
+
+/* End of Cool Hamburger Animation */
+
+/* Buttons */
+.button
+  text-transform: uppercase
+  background-color: $primary-color
