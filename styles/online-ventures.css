@@ -20,6 +20,20 @@ section.jumbotron h1 {
   font-family: "Fjalla One";
   margin: 1.5em 0 1em; }
 
+h2 {
+  color: #2c3d50;
+  font-family: "Fjalla One";
+  text-transform: uppercase;
+  margin: 50px 0 1em; }
+
+p {
+  color: #777777;
+  font-size: 1.5em;
+  max-width: 800px;
+  margin: 1em auto;
+  color: #777777;
+  font-family: Montserrat; }
+
 section {
   background: white;
   padding: 2rem;
@@ -93,4 +107,5 @@ section {
 /* Buttons */
 .button {
   text-transform: uppercase;
-  background-color: #1bbb9b; }
+  background-color: #1bbb9b;
+  margin: 20px 0 50px; }
