@@ -1,3 +1,10 @@
 $primary-color: #1BBB9B
+$light-gray: #999
 $gray: #777
 $dark-gray: #2C3D50
+
+@mixin hover-fade($color)
+  background-color: $color
+  @include transition (all 1s)
+  &:hover
+    background-color: darken($color, 10%)

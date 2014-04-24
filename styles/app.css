@@ -5460,14 +5460,55 @@ section {
       margin: 0;
       font-weight: 300; }
   .home-portfolio a.leconcours {
-    background-color: #5e4688; }
+    background-color: #5e4688;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s; }
+    .home-portfolio a.leconcours:hover {
+      background-color: #473566; }
   .home-portfolio a.chestnut {
-    background-color: #21737c; }
+    background-color: #21737c;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s; }
+    .home-portfolio a.chestnut:hover {
+      background-color: #164e54; }
   .home-portfolio a.getawaydealz {
-    background-color: #f26428; }
+    background-color: #f26428;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s; }
+    .home-portfolio a.getawaydealz:hover {
+      background-color: #da4a0d; }
   .home-portfolio a.datekeeper {
-    background-color: #017a8c; }
+    background-color: #017a8c;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s; }
+    .home-portfolio a.datekeeper:hover {
+      background-color: #014e59; }
   .home-portfolio a.motorcar {
-    background-color: #44944c; }
+    background-color: #44944c;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s; }
+    .home-portfolio a.motorcar:hover {
+      background-color: #34713a; }
   .home-portfolio a.susanjoy {
-    background-color: #a4c4b9; }
+    background-color: #a4c4b9;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s; }
+    .home-portfolio a.susanjoy:hover {
+      background-color: #85b0a1; }
+
+.reveal-modal .ninja {
+  position: absolute;
+  top: -1000px;
+  left: 1000px; }
+
+footer span {
+  text-align: center;
+  display: block;
+  color: #999999;
+  font-size: 0.75em; }

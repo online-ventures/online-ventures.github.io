@@ -1,3 +1,4 @@
+@import "bourbon/bourbon"
 @import "components/variables"
 @import "foundation/foundation"
 
@@ -140,14 +141,27 @@ section
         font-weight: 300
 
     &.leconcours
-      background-color: #5E4688
+      @include hover-fade(#5E4688)
     &.chestnut
-      background-color: #21737C
+      @include hover-fade(#21737C)
     &.getawaydealz
-      background-color: #F26428
+      @include hover-fade(#F26428)
     &.datekeeper
-      background-color: #017A8C
+      @include hover-fade(#017A8C)
     &.motorcar
-      background-color: #44944C
+      @include hover-fade(#44944C)
     &.susanjoy
-      background-color: #A4C4B9
+      @include hover-fade(#A4C4B9)
+
+.reveal-modal
+  .ninja
+    position: absolute
+    top: -1000px
+    left: 1000px
+
+footer
+  span
+    text-align: center
+    display: block
+    color: $light-gray
+    font-size: 0.75em
