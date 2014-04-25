@@ -1,3 +1,10 @@
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 meta.foundation-version {
   font-family: "/5.2.2/"; }
 
@@ -5502,10 +5509,44 @@ section {
     .home-portfolio a.susanjoy:hover {
       background-color: #85b0a1; }
 
-.reveal-modal .ninja {
-  position: absolute;
-  top: -1000px;
-  left: 1000px; }
+.loading {
+  width: 24px;
+  height: 24px; }
+  .loading:before {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-top: 2px solid #cccccc;
+    border-right: 2px solid #333333;
+    content: "";
+    -webkit-animation: spin 1s infinite;
+    -moz-animation: spin 1s infinite;
+    animation: spin 1s infinite;
+    border-radius: 100%; }
+
+.reveal-modal {
+  background-color: #2b4a5d; }
+  .reveal-modal h2, .reveal-modal p, .reveal-modal label {
+    color: #7bc1d4; }
+  .reveal-modal label {
+    font-size: 1.2em;
+    margin-top: 0.25em; }
+  .reveal-modal input[type=text], .reveal-modal textarea {
+    color: #cbe3ec;
+    font-size: 1.2em;
+    background-color: #1b323b;
+    border: 1px solid #13232a;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s; }
+    .reveal-modal input[type=text]:focus, .reveal-modal textarea:focus {
+      border-color: #1bbb9b; }
+  .reveal-modal textarea {
+    height: 150px; }
+  .reveal-modal .ninja {
+    position: absolute;
+    top: -1000px;
+    left: 1000px; }
 
 footer span {
   text-align: center;

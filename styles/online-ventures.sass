@@ -153,7 +153,48 @@ section
     &.susanjoy
       @include hover-fade(#A4C4B9)
 
+.loading
+  width: 24px
+  height: 24px
+  
+  &:before
+    display: block
+    
+    width: 22px
+    height: 22px
+    
+    border-top: 2px solid #ccc
+    border-right: 2px solid #333
+    
+    content: ""
+    
+    @include animation(spin 1s infinite)
+    border-radius: 100%
+
 .reveal-modal
+  background-color: $dark-blue
+
+  .loading
+
+  h2,p,label
+    color: $light-blue
+
+  label
+    font-size: 1.2em
+    margin-top: 0.25em
+
+  input[type=text],textarea
+    color: #CBE3EC
+    font-size: 1.2em
+    background-color: $darkest-blue
+    border: 1px solid darken($darkest-blue,5%)
+    @include transition(all 0.25s)
+    &:focus
+      border-color: $primary-color
+
+  textarea
+    height: 150px
+
   .ninja
     position: absolute
     top: -1000px
@@ -165,3 +206,4 @@ footer
     display: block
     color: $light-gray
     font-size: 0.75em
+

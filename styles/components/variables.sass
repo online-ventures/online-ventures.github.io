@@ -2,9 +2,17 @@ $primary-color: #1BBB9B
 $light-gray: #999
 $gray: #777
 $dark-gray: #2C3D50
+$light-blue: #7BC1D4
+$blue: #3597D3
+$dark-blue: #2b4a5d
+$darkest-blue: #1B323B
 
 @mixin hover-fade($color)
   background-color: $color
   @include transition (all 1s)
   &:hover
     background-color: darken($color, 10%)
+
+@keyframes spin
+  to
+    @include transform(rotate( 360deg ))

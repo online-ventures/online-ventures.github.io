@@ -89,30 +89,37 @@
       <h2>Contact Us</h2>
       <p class="lead">Lets connect and see what the future holds for you.</p>
       <a class="close-reveal-modal">&#215;</a>
-      <input type="text" id="honeypot" value="" class="ninja" tabindex="-1" />
-      <div class="row">
-        <div class="small-12 large-2 columns">
-          <label>Name</label>
+      <div class="loading"></div>
+      <form action="http://www.wov.io/contact" method="post">
+        <input type="text" id="honeypot" value="" class="ninja" tabindex="-1" />
+        <div class="row">
+          <div class="small-12 large-2 columns">
+            <label>Name</label>
+          </div>
+          <div class="small-12 large-10 columns">
+            <input type="text" id="email" />
+          </div>
         </div>
-        <div class="small-12 large-10 columns">
-          <input type="text" id="email" />
+        <div class="row">
+          <div class="small-12 large-2 columns">
+            <label>Email</label>
+          </div>
+          <div class="small-12 large-10 columns">
+            <input type="text" id="email" />
+          </div>
         </div>
-        <div class="small-12 large-2 columns">
-          <label>Email</label>
+        <div class="row">
+          <div class="small-12 large-2 columns">
+            <label>Message</label>
+          </div>
+          <div class="small-12 large-10 columns">
+            <textarea type="text" id="message"></textarea>
+          </div>
+          <input type="submit" value="Send" class="button"/>
         </div>
-        <div class="small-12 large-10 columns">
-          <input type="text" id="email" />
-        </div>
-        <div class="small-12 large-2 columns">
-          <label>Message</label>
-        </div>
-        <div class="small-12 large-10 columns">
-          <input type="text" id="email" />
-        </div>
-        <input type="submit" value="Send" class="button"/>
-      </div>
+      </form>
     </div>
-    <script type="text/javascript" src="/scripts/online-ventures.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
   </body>
 </html>
 
