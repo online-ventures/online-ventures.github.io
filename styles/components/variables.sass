@@ -13,6 +13,8 @@ $darkest-blue: #1B323B
   &:hover
     background-color: darken($color, 10%)
 
-@keyframes spin
+@include keyframes(spin)
+  from
+    @include transform(rotate(0deg))
   to
     @include transform(rotate( 360deg ))

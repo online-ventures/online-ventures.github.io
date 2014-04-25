@@ -1,4 +1,23 @@
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+
+  to {
+    -moz-transform: rotate(360deg); } }
 @keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
   to {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -5510,18 +5529,18 @@ section {
       background-color: #85b0a1; }
 
 .loading {
-  width: 24px;
-  height: 24px; }
+  width: 45px;
+  height: 45px; }
   .loading:before {
     display: block;
-    width: 22px;
-    height: 22px;
-    border-top: 2px solid #cccccc;
-    border-right: 2px solid #333333;
+    width: 40px;
+    height: 40px;
+    border-top: 4px solid #cccccc;
+    border-right: 4px solid #2b4a5d;
     content: "";
-    -webkit-animation: spin 1s infinite;
-    -moz-animation: spin 1s infinite;
-    animation: spin 1s infinite;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
     border-radius: 100%; }
 
 .reveal-modal {

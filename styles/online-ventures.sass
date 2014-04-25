@@ -154,21 +154,21 @@ section
       @include hover-fade(#A4C4B9)
 
 .loading
-  width: 24px
-  height: 24px
+  width: 45px
+  height: 45px
   
   &:before
     display: block
     
-    width: 22px
-    height: 22px
+    width: 40px
+    height: 40px
     
-    border-top: 2px solid #ccc
-    border-right: 2px solid #333
+    border-top: 4px solid #ccc
+    border-right: 4px solid $dark-blue
     
     content: ""
     
-    @include animation(spin 1s infinite)
+    @include animation(spin 1s linear infinite)
     border-radius: 100%
 
 .reveal-modal
