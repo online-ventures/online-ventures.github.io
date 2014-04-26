@@ -5530,7 +5530,9 @@ section {
 
 .loading {
   width: 45px;
-  height: 45px; }
+  height: 45px;
+  margin: 150px auto;
+  display: none; }
   .loading:before {
     display: block;
     width: 40px;
@@ -5542,6 +5544,10 @@ section {
     -moz-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
     border-radius: 100%; }
+
+.success {
+  display: none;
+  font-size: 1.2em; }
 
 .reveal-modal {
   background-color: #2b4a5d; }

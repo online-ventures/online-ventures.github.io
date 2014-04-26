@@ -181,7 +181,17 @@
     });
     popup = new AjaxifyModal('contact-popup');
     return popup.form.submit(function(e) {
-      $('#contact-popup form').trigger('ajax:send');
+      var data, form;
+      form = $('#contact-popup form');
+      form.trigger('ajax:send');
+      data = {
+        name: $('#name').val(),
+        email: $('#email').val(),
+        message: $('#message').val()
+      };
+      $.post('http://www.wov.io/contact', data, function() {
+        return form.trigger('ajax:success');
+      });
       e.preventDefault();
       return false;
     });

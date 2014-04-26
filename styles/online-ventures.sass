@@ -156,20 +156,21 @@ section
 .loading
   width: 45px
   height: 45px
-  
+  margin: 150px auto
+  display: none
   &:before
     display: block
-    
     width: 40px
     height: 40px
-    
     border-top: 4px solid #ccc
     border-right: 4px solid $dark-blue
-    
     content: ""
-    
     @include animation(spin 1s linear infinite)
     border-radius: 100%
+    
+.success
+  display: none
+  font-size: 1.2em
 
 .reveal-modal
   background-color: $dark-blue
