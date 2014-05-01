@@ -11,7 +11,7 @@ $(document).ready ->
       email: $('#email').val()
       message: $('#message').val()
     }
-    $.post('http://www.wov.io/contact', data, ->
+    $.post('http://app.wov.io/contact', data, ->
       form.trigger('ajax:success')
     )
     e.preventDefault()

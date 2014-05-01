@@ -189,7 +189,7 @@
         email: $('#email').val(),
         message: $('#message').val()
       };
-      $.post('http://www.wov.io/contact', data, function() {
+      $.post('http://app.wov.io/contact', data, function() {
         return form.trigger('ajax:success');
       });
       e.preventDefault();
