@@ -5373,14 +5373,16 @@ section.jumbotron h1 {
   color: white;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Fjalla One";
-  margin: 1.5em 0 1em; }
+  font-family: "Oswald";
+  margin: 1.5em 0 1em;
+  letter-spacing: 0.1em; }
 
 h2 {
   color: #2c3d50;
-  font-family: "Fjalla One";
+  font-family: "Oswald";
   text-transform: uppercase;
-  margin: 50px 0 1em; }
+  margin: 50px 0 1em;
+  letter-spacing: 0.05em; }
 
 p {
   color: #777777;
@@ -5465,8 +5467,12 @@ section {
   text-transform: uppercase;
   background-color: #1bbb9b;
   margin: 20px 0 50px;
-  font-family: "Fjalla One";
-  width: 300px; }
+  font-family: "Oswald";
+  font-size: 25px;
+  width: 400px;
+  border-radius: 2px;
+  padding: 20px 0;
+  letter-spacing: 0.1em; }
 
 /* Home Page Portfolio */
 .home-portfolio a {
@@ -5482,11 +5488,13 @@ section {
     .home-portfolio a span.title {
       font-size: 1.5em;
       margin: 60px 0 0.25em;
-      font-weight: 400; }
+      font-weight: 400;
+      letter-spacing: 0.05em; }
     .home-portfolio a span.subtitle {
       font-size: 1.2em;
       margin: 0;
-      font-weight: 300; }
+      font-weight: 300;
+      letter-spacing: 0.1em; }
   .home-portfolio a.leconcours {
     background-color: #5e4688;
     -webkit-transition: all 1s;
