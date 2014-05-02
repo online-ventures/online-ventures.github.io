@@ -5464,7 +5464,8 @@ section {
 .button {
   text-transform: uppercase;
   background-color: #1bbb9b;
-  margin: 20px 0 50px; }
+  margin: 20px 0 50px;
+  font-family: "Fjalla One"; }
 
 /* Home Page Portfolio */
 .home-portfolio a {
